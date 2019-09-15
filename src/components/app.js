@@ -9,6 +9,8 @@ import Header from "./header";
 import Home from "./home";
 import Services from "./services";
 
+import "./app.scss";
+
 const App = () => (
 
     <div className="app">

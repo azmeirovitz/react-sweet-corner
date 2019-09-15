@@ -1,4 +1,36 @@
 
-.center {
+.homeContainer {    
+display: table;
+clear: both;
+}
+
+.main {
+    display: table-cell;
+    width: 70%;    
+}
+
+.paragraphs {
+    width: 80%;
+}
+
+.h2 {
     color: #754b23;
+}
+
+.aside {
+    display: table-cell;
+    width: 30%;
+    background-image: url("../../assets/images/strips2.png");    
+}
+
+.asideDots {
+    position: relative;
+    top: 20px;
+    left: 55%;
+}
+
+.bottomLine {
+    font-family:  "Allura", Cursive;
+    font-size: 30px; 
+    text-align: center;
 }
