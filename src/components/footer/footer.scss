@@ -1,0 +1,32 @@
+
+#footer {
+    background-color: #06b4af;
+    background-image: url("../../assets/images/phone.png");
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: 84% 50%;
+
+}
+
+.dotsImg {    
+    position: relative;
+    top: 2px;
+    left: 20px;
+    
+}
+
+.phoneNumber {
+    position: relative;
+    top: 32px;
+    left: 85%;
+    color: white;
+} 
+
+.copyright {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    left: 30%;
+}
