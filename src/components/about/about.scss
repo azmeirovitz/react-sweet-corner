@@ -2,12 +2,10 @@
 .mainDiv {
     display: table;
     clear: both;
-    //display: inline-block;
 }
 
 .main {
     display: table-cell;
-    //display: inline-block;
     width: 55%;
 }
 
@@ -29,7 +27,12 @@
 
 .aside2 {
     display: table-cell;
-    //display: inline-block;
     width: 25%;
     background-image: url("../../assets/images/strips1.png");
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+}
+
+p {
+    font-size: 20px;
 }
