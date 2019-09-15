@@ -1,7 +1,6 @@
 import React from 'react';
 import {Route} from "react-router-dom";
 import '../assets/css/app.scss';
-//import logo from '../assets/images/logo.svg';
 
 import About from "./about";
 import Contact from "./contact";
