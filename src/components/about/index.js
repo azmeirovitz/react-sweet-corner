@@ -47,6 +47,9 @@ const About = (props) => {
 
     <img src={about1} alt="Cupcakes"/>
 
+    <br></br>
+    <br></br>
+    <br></br>
 
 </div>
 );
