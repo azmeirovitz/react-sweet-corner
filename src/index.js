@@ -8,10 +8,12 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import rootReducer from './reducers';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const store = createStore(rootReducer);
 
 ReactDOM.render(
-    <Provider>
+    <Provider store={store}>
         <Router>
             <App />
         </Router>
@@ -19,4 +21,3 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
- 
