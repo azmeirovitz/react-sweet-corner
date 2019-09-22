@@ -1,6 +1,5 @@
 import React from 'react';
-//import '../../contact/contact.scss';
-import {Field, reduxForm} from 'redux-form';
+import {reduxForm} from 'redux-form';
 import Input from '../general/form/input.js';
 import Textarea from '../general/form/textarea.js';
 
@@ -9,10 +8,6 @@ const Form = props => {
 
     const handleFormSubmit = (formValues) => {
         console.log("On submit simple form values: ", formValues);
-    }
-
-    const resetForm = () => {
-        props.reset();
     }
 
     const {handleSubmit} = props 
@@ -24,16 +19,15 @@ const Form = props => {
             <br></br>
 
             <form onSubmit={handleSubmit(handleFormSubmit)}>
-
+            
             <Input />
             <Textarea />
 
             <br></br>              
 
                 <div >
-                    <button className="form-actions" onClick={handleFormSubmit} type="button">SEND</button> 
+                    <button className="form-actions" type="submit">SEND</button> 
                 </div> 
-               
 
 
             </form>
@@ -42,7 +36,6 @@ const Form = props => {
     )
 }
 
-
 export default reduxForm ({
-    form: 'simple-form' //A unique identifyer
-})(Form) //Why not simpleForm?
+    form: 'simple-form',  //A unique identifyer
+})(Form)                //Can also be simpleForm

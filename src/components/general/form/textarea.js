@@ -9,7 +9,7 @@ const Textarea = (props) => {
             <Field 
                     className="input-field-message"
                     name="message" 
-                    component="input"
+                    component="textarea"
                     rows="3"
                     cols="10"                    
                     type="text" placeholder="Message"
