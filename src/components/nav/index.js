@@ -21,6 +21,10 @@ const Nav = (props) => {
                 <Link to="/contact">Contact</Link>
             </li>
 
+            <li className="line">
+                <Link to="/products">Products</Link>
+            </li>
+
         </ul>
     )
 }
