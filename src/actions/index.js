@@ -20,4 +20,22 @@ export const getAllProducts = () => async dispatch => {
     }
 }
 
-//getAllProducts is the action creator, like we create a function. The dispatch is the action (what the function, or the action creatoe does). What the dispatch does is the reducer, the reducer job, or the reducer function.
+//getAllProducts is the action creator, like we create a function. The dispatch is the action (what the function, or the action creator does). What the dispatch does is the reducer, the reducer job, or the reducer function.
+
+export const getProductDetils = productId => async dispatch => {
+    try {
+        
+        const resp = await axios.get(`${BASE_URL}/api/products/${productId}`);
+
+        dispatch ({
+            type: types.GET_PRODUCT_DETAILS,
+            product: resp.data
+        })
+
+        //console.log("server response: ", resp);
+
+    } catch (error) {
+        console.log("Error getting product details: ", error);
+    }
+
+}
