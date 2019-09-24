@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {getProductDetils} from '../../actions';
+import {clearProductDetails, getProductDetails} from '../../actions';
 import Money from '../general/money';
 import './product-details.scss';
+
 
 class ProductDetails extends Component {
 
 componentDidMount () {
-    //console.log("Product Details Component Mounted");
-    //console.log("Product ID: ", this.props.match.url);
+    
+    const {getProductDetails, match: {params}} = this.props;
 
-    const {getProductDetils, match: {params}} = this.props;
-
-    getProductDetils(params.product_id);
+    getProductDetails(params.product_id);
 
     // this.props.getProductDetils(this.props.match.params.product_id);
 
@@ -20,10 +19,15 @@ componentDidMount () {
 
 //A match object contains information about how a <Route path> matched the URL. It was products/id, and the id is the number that is part of the URL.
 
+componentWillUnmount () {
+    console.log("ProductDetails component about to unmount");
+
+    this.props.clearProductDetails();
+}
+
 
 render () {
 
-    //const {details} = this.props;
     const {products} = this.props;
 
     console.log("product details: ", this.props.products);
@@ -31,11 +35,6 @@ render () {
     if (products == null)
         return (<h1>Loading Page</h1>)
 
-    // if (!details){
-    //     return (
-    //     <h1>Loading Page</h1>
-    //     )
-    // }
     return (
 
         <div className="product-details"> 
@@ -47,6 +46,7 @@ render () {
             <div className="cost">
             <Money cost={products.cost}/>
             </div>
+            <br></br>
 
                        
         </div>
@@ -65,9 +65,7 @@ function mapStateToProps (state) {
 
 //Connecting Product component and getProductDetails to Redux:
 export default connect(mapStateToProps, {
-    getProductDetils: getProductDetils
-})(ProductDetails);
+    clearProductDetails: clearProductDetails,
+    getProductDetails: getProductDetails
+})(ProductDetails);               
 
-                
-
-// export default ProductDetails;
