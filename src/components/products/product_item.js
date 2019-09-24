@@ -7,14 +7,13 @@ const ProductItem = (props) => {
 
     console.log("ProductItem props: ", props);
     return (
-        <div className= "grid product-item">
+        <div className= "grid product-item" onClick={props.goToDetails}>
             
                 <div>{props.name}</div>
                 <img src={props.thumbnail.url} alt="Cupcake"/>
-                <div>{props.thumbnail.altText}</div>                
-
+                <div>{props.thumbnail.altText}</div>
                 {/* <div>${props.cost/100}</div> */}
-
+                
                 <Money cost={props.cost}/>
             
             <br></br>

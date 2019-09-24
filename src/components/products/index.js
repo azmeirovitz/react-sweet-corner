@@ -10,13 +10,24 @@ componentDidMount () {
     this.props.getAllProducts();
 }
 
+goToDetails (id) {
+    this.props.history.push(`/products/${id}`);
+
+}
+
 render () {
 
     const {products} = this.props;
     console.log("products from render: ", products);
 
     const productElements = products.map((product) => {
-        return <ProductItem key={product.id} {...product} />
+        return (
+        <ProductItem 
+        key={product.id} {...product} 
+        goToDetails={this.goToDetails.bind(this, product.id)}
+        />
+        
+        );
     });
 
     
