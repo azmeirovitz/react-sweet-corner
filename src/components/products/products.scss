@@ -9,8 +9,14 @@
 .grid {
     display: inline-block;
     width: 33%;
-    margin: 1px;
+    margin: 1px;    
 }
+
+.grid:hover {
+    background-color: yellow;
+}
+
+.grid {cursor: pointer;}
 
 .row {
     text-align: center;

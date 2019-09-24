@@ -10,7 +10,7 @@ const Money = (props) => {
 
     return (
     
-    <div>${cupcakeCostDollars}</div>
+    <div>${(cupcakeCostDollars).toFixed(2)}</div>
     )
 
 }
