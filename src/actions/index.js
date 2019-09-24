@@ -1,37 +1,23 @@
 import types from './types';
 import axios from 'axios';
 
-const BASE_URL = "http://api.sc.lfzprototypes.com";
-
-
-//Export a function named getAllProducts that has no parameters 
-//getAllProducts should return an async function that has a single parameter named dispatch
+const BASE_URL = 'http://api.sc.lfzprototypes.com';
 
 export const getAllProducts = () => async dispatch => {
-    
-    
     try {
 
-        const resp = await axios.get(BASE_URL + '/api/products');
-        //console.log("response: ", resp);
+        const resp = await axios.get(BASE_URL +'/api/products');
 
-    //This is the action in the action creator (the getAllproducts method)
-    //sending the action to the reducres using th edispatch method 
+        dispatch ({
+            type: types.GET_ALL_PRODUCTS,
+            products: resp.data.products
+        });
 
-    dispatch({
-        type: types.GET_ALL_PRODUCTS, 
-        products: resp.data.products
-    });
-
-    //Inside the dispatch, is what we send to the reducers. This will update the Redux state in the reducer. 
-
+        //console.log("Get all products response: ", resp);        
         
     } catch (error) {
-        console.log("Error when getting the products", error);
+        console.log("Error getting all products: ", error);
     }
-
-    
-
-
 }
 
+//getAllProducts is the action creator, like we create a function. The dispatch is the action (what the function, or the action creatoe does). What the dispatch does is the reducer, the reducer job, or the reducer function.

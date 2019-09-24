@@ -22,7 +22,7 @@ const Nav = (props) => {
             </li>
 
             <li className="line">
-                <Link to="/products">Products</Link>
+                <Link to="/products">products</Link>
             </li>
 
         </ul>
