@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Money from '../general/money';
 
 
 const ProductItem = (props) => {
@@ -13,7 +13,9 @@ const ProductItem = (props) => {
                 <img src={props.thumbnail.url} alt="Cupcake"/>
                 <div>{props.thumbnail.altText}</div>                
 
-                <div>${props.cost/100}</div>
+                {/* <div>${props.cost/100}</div> */}
+
+                <Money cost={props.cost}/>
             
             <br></br>
             
