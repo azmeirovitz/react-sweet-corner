@@ -1,7 +1,4 @@
 import React from 'react';
-import {getAllProducts} from '../../actions';
-
-//import {price} from 'ProductItem';
 
 const Money = (props) => {
 

@@ -5,10 +5,7 @@ import {getAllProducts} from '../../actions';
 import ProductItem from './product_item';
 
 class Products extends Component {
-    // constructor (props) {
-    //     super (props)
-    // }
-
+    
 componentDidMount () {
     this.props.getAllProducts();
 }
