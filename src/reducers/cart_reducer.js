@@ -12,19 +12,26 @@ export default (state = DEFAULT_STATE, action) => {
     switch (action.type) {
 
         case types.ADD_ITEM_TO_CART:
-            //console.log("Cart Reducer Action: ", action);
+            
             return {...state, total: action.cartTotal};
             break;
 
         case types.GET_ACTIVE_CART:
-            //console.log("Cart Reducer Action: ", action);
+            
             return {
                 ...state, 
                 cartId: action.cart.cartId, 
                 items: action.cart.items, 
                 total: action.cart.total
-            }
+            };
+            break;
 
+        case types.GET_CART_TOTALS:
+            
+            return {
+                ...state,
+                total: action.total //From the resp.data.total in the actions
+            };
 
         default:
             return state;
