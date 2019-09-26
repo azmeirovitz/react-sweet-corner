@@ -53,10 +53,6 @@ export const addItemToCart = (productId, quantity) => async dispatch => {
             }
         };
 
-        //console.log("Cart Tpken: ", cartToken);
-
-        //return;
-        
         const resp = await axios.post(`${BASE_URL}/api/cart/items/${productId}`, {
             quantity: quantity
         }, axiosConfig);
@@ -64,17 +60,38 @@ export const addItemToCart = (productId, quantity) => async dispatch => {
         localStorage.setItem("sc-cart-token", resp.data.cartToken); 
         
 
-        //console.log("addItemToCart response: ", resp);
-
         dispatch ({
             type: types.ADD_ITEM_TO_CART,
             cartTotal: resp.data.total
         });
 
-        //console.log("From Action Creator: quantity: ", quantity, ", productID: ", productId);
-
+        
     } catch (error) {
         console.log("Add Item To Cart Error: ", error.message);
+    }
+}
+
+export const getActiveCart = () => async dispatch => {
+    try {
+        const cartToken = localStorage.getItem('sc-cart-token');
+
+        const axiosConfig = {
+            headers: {
+                "X-Cart-Token": cartToken
+            } 
+        }
+
+        const resp = await axios.get(`${BASE_URL}/api/cart`, axiosConfig);
+
+        //console.log("getActiveCart server response", resp);
+
+        dispatch ({
+            type: types.GET_ACTIVE_CART,
+            cart: resp.data
+        })
+
+    } catch (error) {
+        console.log("Get active cart error: ", error);
     }
 }
 

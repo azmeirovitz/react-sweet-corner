@@ -10,6 +10,8 @@ import Home from "./home";
 import Services from "./services";
 import Products from "./products";
 import ProductDetails from "./products/product_details";
+import Cart from './cart';
+
 
 import "./app.scss";
 
@@ -27,6 +29,8 @@ const App = () => (
             <Route path="/products" exact component={Products} />
 
             <Route path="/products/:product_id" component={ProductDetails} />
+
+            <Route path="/cart" component={Cart} />
 
             
 
