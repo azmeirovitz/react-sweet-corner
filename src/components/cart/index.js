@@ -28,8 +28,6 @@ componentDidMount () {
 
 function mapStateToProps (state) {
     
-    console.log("state from cart/index.js: ",state);
-
     return {
         cartItems: state.cart.items
     }
@@ -40,4 +38,3 @@ export default connect(mapStateToProps, {
 })(Cart);
 
 
-//export default Cart;
