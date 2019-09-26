@@ -42,3 +42,39 @@ export const clearProductDetails = () => (
     }
 );
 
+export const addItemToCart = (productId, quantity) => async dispatch => {
+    try {
+
+        const cartToken = localStorage.getItem('sc-cart-token');
+
+        const axiosConfig = {
+            headers: {
+                "X-Cart-Token": cartToken
+            }
+        };
+
+        //console.log("Cart Tpken: ", cartToken);
+
+        //return;
+        
+        const resp = await axios.post(`${BASE_URL}/api/cart/items/${productId}`, {
+            quantity: quantity
+        }, axiosConfig);
+
+        localStorage.setItem("sc-cart-token", resp.data.cartToken); 
+        
+
+        //console.log("addItemToCart response: ", resp);
+
+        dispatch ({
+            type: types.ADD_ITEM_TO_CART,
+            cartTotal: resp.data.total
+        });
+
+        //console.log("From Action Creator: quantity: ", quantity, ", productID: ", productId);
+
+    } catch (error) {
+        console.log("Add Item To Cart Error: ", error.message);
+    }
+}
+

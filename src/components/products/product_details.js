@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {clearProductDetails, getProductDetails} from '../../actions';
+import {addItemToCart, clearProductDetails, getProductDetails} from '../../actions';
 import Money from '../general/money';
 import './product-details.scss';
 
@@ -64,7 +64,9 @@ handleAddToCart () {
     const {id} = this.props.products;
     const {quantity} = this.state;
 
-    console.log(`Add ${quantity} items to cart, with product ID: ${id}`);
+    //console.log(`Add ${quantity} items to cart, with product ID: ${id}`);
+
+    this.props.addItemToCart(id, quantity);
 }
 
 
@@ -120,6 +122,7 @@ function mapStateToProps (state) {
 
 //Connecting Product component and getProductDetails to Redux:
 export default connect(mapStateToProps, {
+    addItemToCart: addItemToCart,
     clearProductDetails: clearProductDetails,
     getProductDetails: getProductDetails
 })(ProductDetails);               
