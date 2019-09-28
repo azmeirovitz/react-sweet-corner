@@ -12,8 +12,7 @@ const ProductItem = (props) => {
                 <div>{props.name}</div>
                 <img src={props.thumbnail.url} alt="Cupcake"/>
                 <div>{props.thumbnail.altText}</div>
-                {/* <div>${props.cost/100}</div> */}
-                
+                                
                 <Money cost={props.cost}/>
             
             <br></br>
