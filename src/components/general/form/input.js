@@ -2,7 +2,7 @@ import React from 'react';
 import '../../contact/contact.scss';
 import { Field } from 'redux-form';
 
-      
+       
 const Input = (props) => {
     return (
         <div>
