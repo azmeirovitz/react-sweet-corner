@@ -5,7 +5,7 @@ import Schedule from "../general/schedule/index.js";
 import upDots from "../../assets/images/up-dots.png";
 import downDots from "../../assets/images/down-dots.png";
 
-
+ 
 const Contact = (props) => {
     return (
     <div>

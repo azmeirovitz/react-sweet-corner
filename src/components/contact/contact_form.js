@@ -2,7 +2,7 @@ import React from 'react';
 import {reduxForm} from 'redux-form';
 import Input from '../general/form/input.js';
 import Textarea from '../general/form/textarea.js';
-
+ 
 
 const Form = props => {
 
