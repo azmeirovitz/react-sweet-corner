@@ -44,19 +44,24 @@ render () {
                     <tbody>
                     {cartItems.map(oneItem => {
                     return (
-                        <tr key={cartItems.productId}>
+                        <tr key={oneItem.productId}>
                             <td className="td">
                              <img className="cupcakeImgCart" src={oneItem.thumbnail.url} />
                             </td>
 
-                            <td className="td">{cartItems.map(oneItem => <div>{oneItem.name}</div>)}</td>
+                            <td className="td">
+                           {/* {cartItems.map(oneItem => 
+                           <div> */}
+                           {oneItem.name}
+                           {/* </div>)} */}
+                           </td>
                             
-                            <td className="td">{cartItems.map(oneItem => <div>${(oneItem.each/100).toFixed(2)}</div>)}</td>                   
+                            <td className="td">${(oneItem.each/100).toFixed(2)}</td>                   
 
 
-                            <td className="td">{cartItems.map(oneItem => <div>{oneItem.quantity}</div>)}</td>
+                            <td className="td">{oneItem.quantity}</td>
 
-                            <td className="td">{cartItems.map(oneItem => <div>${(oneItem.total/100).toFixed(2)}</div>)}</td>
+                            <td className="td">${(oneItem.total/100).toFixed(2)}</td>
                     </tr> 
                     )})}
                         

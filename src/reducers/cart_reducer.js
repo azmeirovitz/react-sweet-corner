@@ -33,6 +33,19 @@ export default (state = DEFAULT_STATE, action) => {
                 total: action.total //From the resp.data.total in the actions
             };
 
+        case types.CREATE_GUEST_ORDER:
+
+             return DEFAULT_STATE
+        /// OR
+        //     return {
+        //         ...state,
+        //          cartId: null,
+        //          items: null,
+        //          total: null
+        //     }
+
+
+
         default:
             return state;
     }
