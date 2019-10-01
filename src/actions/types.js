@@ -4,7 +4,8 @@ export default {
     GET_ACTIVE_CART: 'get_active_cart',
     GET_ALL_PRODUCTS: 'get_all_products',
     GET_PRODUCT_DETAILS: 'get_product_details',
-    GET_CART_TOTALS: 'get_cart_totals'    
+    GET_CART_TOTALS: 'get_cart_totals',
+    CREATE_GUEST_ORDER: 'create_guest_order'    
         
 };
 

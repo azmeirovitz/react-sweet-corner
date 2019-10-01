@@ -60,7 +60,7 @@ decrememntQuantity () {
 
 }
 
-async handleAddToCart () {
+handleAddToCart = async () => {
     const {id} = this.props.products;
     const {quantity} = this.state;
 
@@ -76,9 +76,10 @@ render () {
     
     const {products} = this.props;
     
+    console.log("product details: ", this.props);
     console.log("product details: ", this.props.products);
 
-    if (products == null)
+    if (products === null)
         return (<h1>Loading Page</h1>)
 
     return (
