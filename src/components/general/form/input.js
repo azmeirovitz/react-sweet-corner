@@ -42,10 +42,13 @@ const Input = (props) => {
                 className="input-field-phone"
                 name="phone" 
                 component="input" 
-                type="number" 
+                type="text" 
                 placeholder="Phone"
-                //pattern=".{10,}"
-                pattern="/([0-9]){3}-([0-9]){3}-([0-9]){4}/"
+                pattern=".{10,}"
+                //pattern="^\([0-9]{3}\)[0-9]{3}-[0-9]{4}$"
+                //pattern="^[2-9]\d{2}-\d{3}-\d{4}$"
+                //pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+                //pattern="^\([0-9]){3}-([0-9]){3}-([0-9]){4}/"
                 required 
                     />
             </div>

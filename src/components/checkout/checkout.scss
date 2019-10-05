@@ -1,5 +1,5 @@
 
-.inputFirstName {
+.inputFirstName, .inputLastName, .inputEmail {
     background-color: #e86b35;
     width: 250px;
     height: 35px;
@@ -7,24 +7,36 @@
 
 }
 
-.inputLastName {
-    background-color: #f6b53e;
-    width: 250px;
-    height: 35px;
-    margin-left: 35%;
-}
+// .inputLastName {
+//     background-color: #e86b35;
+//     width: 250px;
+//     height: 35px;
+//     margin-left: 35%;
+// }
 
-.inputEmail {
+// .inputEmail {
 
-    background-color: #e86b35;
-    width: 250px;
-    height: 35px;
-    margin-left: 35%;
-}
+//     background-color: #e86b35;
+//     width: 250px;
+//     height: 35px;
+//     margin-left: 35%;
+// }
 
 .submitOrder {
     background-color: #06b4af;
     width: 150px;
     height: 35px;
     margin-left: 42%; 
+}
+
+.with-error {
+    background-color: #e86b35;
+    width: 250px;
+    height: 35px;
+    margin-left: 35%;
+}
+
+.errorMessage {
+    color: green;
+    margin-left: 35%;
 }
