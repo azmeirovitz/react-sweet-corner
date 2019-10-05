@@ -16,7 +16,7 @@ class CartWidget extends Component {
         const {total} = this.props;
         let itemsAmount = 0;
 
-        if (total) {
+        if (total && total.items) {
             itemsAmount = total.items
         }
 

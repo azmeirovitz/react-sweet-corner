@@ -9,17 +9,14 @@ import {createGuestOrder} from '../../actions';
 class GuestCheckout extends Component {
 
 handleGuestCheckout = async (formValues) => {
-    //console.log("On submit simple form values: ", formValues);
-
+    
     const orderInfo =  await this.props.createGuestOrder(formValues);
 
-    console.log("orderInfo: ", orderInfo); ///The orderId is undefined ?
+    console.log("orderInfo: ", orderInfo); 
 
     const redirectUrl = `/orders/guest/${orderInfo.orderId}?email=${orderInfo.email}`;
 
     this.props.history.push(redirectUrl);
-
-    //EXAMPLE: "/orders/guest/191dbe62-65f6-4fcb-aed3-f44acaa610c4?email=jinny@example.com";
 
     }
 
