@@ -97,14 +97,17 @@ render () {
             <br></br>
 
             <div className="productQuantity right mb-3">
-                <h2 className="goLeft">Quantity</h2>
+                <h2 className="quant">Quantity</h2>
                 <div className="quantityControl">
-                    <button className="btn btn-quantity" onClick={this.decrememntQuantity.bind(this)}>-</button>
-                    <span className="quantity">{this.state.quantity}</span>
-                    <button className="btn btn-quantity" onClick={this.incrementQuantity.bind(this)}>+</button>
+                    <button 
+                    className="buttonDecrement" onClick={this.decrememntQuantity.bind(this)}>-</button>
+                    <div className="quantity">  {this.state.quantity}  </div>
+                    <button className="buttonIncrement" onClick={this.incrementQuantity.bind(this)}>+</button>
                 </div>
 
-                <button className="btn" onClick={this.handleAddToCart.bind(this)}>Add To Cart</button>
+                <br></br>
+
+                <button className="buttonDetails" onClick={this.handleAddToCart.bind(this)}>Add To Cart</button>
 
             </div>
 

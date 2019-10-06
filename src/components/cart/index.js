@@ -23,8 +23,6 @@ render () {
     if (cartItems == null)
         return (<h1>Loading Page</h1>)
 
-    //console.log("Cart Product name: ", cartItems[1].name);     
-
     return (
         <div>
             <h1 className="center">Cart</h1>
@@ -50,11 +48,8 @@ render () {
                             </td>
 
                             <td className="td">
-                           {/* {cartItems.map(oneItem => 
-                           <div> */}
-                           {oneItem.name}
-                           {/* </div>)} */}
-                           </td>
+                            {oneItem.name}
+                            </td>
                             
                             <td className="td">${(oneItem.each/100).toFixed(2)}</td>                   
 
@@ -70,7 +65,7 @@ render () {
                 </table>
             </div>
                
-        
+         
     
              
         <Link to="/checkout/guest" className="guest-checkout-link">Checkout As Guest</Link>

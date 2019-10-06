@@ -71,12 +71,15 @@ render () {
     
     return (
         <div>
-            <h1 className="center">Guest Order Details</h1>
-            <h2 className="cartStatus">Status: {this.props.orders &&this.props.orders.status}</h2>
+            <h1 className="center"><span className="spanGuestOrder">Guest</span> Order Details</h1>
+            <h2 className="cartStatus">Status: <span className="spanStatus">{this.props.orders &&this.props.orders.status}</span></h2>
 
-            <h4>Order #: {this.props.orders &&this.props.orders.id}</h4>
+            <h4 className="h4Order">Order #: <span className="spanOrder">{this.props.orders &&this.props.orders.id}</span></h4>
 
-            <h6>"Save order number to check order status in the future"</h6>
+            <h6 className="h6Order">"Save order number to check order status in the future"</h6>
+
+            <br></br>
+            <br></br>
 
             <h5>Order Placed: {objectTime && objectTime[0]}, {objectTime2 && objectTime2[0]}:{objectTime2 && objectTime2[1]}:{res1}{res}</h5>
 

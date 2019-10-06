@@ -30,3 +30,31 @@
     color: #754b23;
 }
 
+.buttonDetails {
+    background-color: aqua;
+    display: inline-block;
+    margin-left: 52%;
+}
+
+.buttonDecrement, .buttonIncrement {
+    background-color: aqua;
+    display: inline-block;
+}
+
+.quantity {
+    background-color: yellow;
+    width: 35px;
+    height: 27px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.quant {
+    margin-left: 50%;
+}
+
+.quantityControl {
+    margin-left: 53%;
+}
+
