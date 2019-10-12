@@ -2,7 +2,7 @@ import React from 'react';
 
 const Money = (props) => {
 
-    console.log("Money props: ", props);
+    //console.log("Money props: ", props);
 
     const cupcakeCostPennies = props.cost;
 

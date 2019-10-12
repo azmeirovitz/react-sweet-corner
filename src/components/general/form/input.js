@@ -12,7 +12,7 @@ const Input = (props) => {
                 name="name" 
                 component="input" 
                 type="name" 
-                placeholder="Name" 
+                placeholder="First-Name Last-Name" 
                 pattern="([A-Za-z ]+) ([A-Za-z ]+)"
                 required
                 />
@@ -27,7 +27,7 @@ const Input = (props) => {
                 name="email" 
                 component="input" 
                 type="email" 
-                placeholder="Email" 
+                placeholder="Email:  example@example.com" 
                 autoComplete="email"
                 pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 required 
@@ -42,10 +42,10 @@ const Input = (props) => {
                 className="input-field-phone"
                 name="phone" 
                 component="input" 
-                type="number" 
-                placeholder="Phone"
+                type="text" 
+                placeholder="Phone: xxx-xxx-xxxx"
                 //pattern=".{10,}"
-                pattern="/([0-9]){3}-([0-9]){3}-([0-9]){4}/"
+                pattern="^\d{3}-\d{3}-\d{4}$"
                 required 
                     />
             </div>

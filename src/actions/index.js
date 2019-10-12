@@ -170,3 +170,42 @@ export const createGuestOrder = (guest) => async dispatch => {
 
 }
 
+export const getGuestOrderDetails = (orderId, email) => async dispatch => {
+    try {
+        
+        const resp = await axios.get(`${BASE_URL}/api/orders/guest/${orderId}?email=${email}`);
+
+    //They wrote /:order_id, but we pass orderId
+
+        console.log("Get Guest Order Details response: ", resp); 
+
+        dispatch ({
+            type: types.GET_GUEST_ORDER_DETAILS,
+            orders: resp.data                    
+         
+
+            //orderDetails: resp.data
+            //OR
+            // orderDetails: {
+            //     orderId: orderId, 
+            //     email: email 
+                
+        });  
+
+            
+
+            // order: {
+            //     id: resp.data.message ,
+            //     orderId: resp.data.id
+            // }               
+
+        
+
+    } catch (error) {
+        console.log("Error with guest order details", error);
+    }
+
+
+
+}
+

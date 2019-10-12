@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 
 
-
+ 
 class Cart extends Component {
 
 componentDidMount () {
@@ -16,14 +16,12 @@ componentDidMount () {
 
 render () {
 
-    console.log("Cart Items: ", this.props.cartItems);
+    //console.log("Cart Items: ", this.props.cartItems);
 
     const {cartItems} = this.props;
 
     if (cartItems == null)
         return (<h1>Loading Page</h1>)
-
-    //console.log("Cart Product name: ", cartItems[1].name);     
 
     return (
         <div>
@@ -50,11 +48,8 @@ render () {
                             </td>
 
                             <td className="td">
-                           {/* {cartItems.map(oneItem => 
-                           <div> */}
-                           {oneItem.name}
-                           {/* </div>)} */}
-                           </td>
+                            {oneItem.name}
+                            </td>
                             
                             <td className="td">${(oneItem.each/100).toFixed(2)}</td>                   
 
@@ -70,7 +65,7 @@ render () {
                 </table>
             </div>
                
-        
+         
     
              
         <Link to="/checkout/guest" className="guest-checkout-link">Checkout As Guest</Link>
