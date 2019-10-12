@@ -11,7 +11,7 @@ class CartWidget extends Component {
     }
 
     render () {
-        console.log("Cart widget props; ", this.props.total);
+        //console.log("Cart widget props; ", this.props.total);
 
         const {total} = this.props;
         let itemsAmount = 0;
@@ -38,7 +38,7 @@ class CartWidget extends Component {
 }
 
 function mapStateToProps (state) {
-    console.log("cart_widget state: ", state);
+    //console.log("cart_widget state: ", state);
     return {
         total: state.cart.total
     }

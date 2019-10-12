@@ -18,8 +18,7 @@ goToDetails (id) {
 render () {
 
     const {products} = this.props;
-    console.log("products from render: ", products);
-
+    
     const productElements = products.map((product) => {
         return (
         <ProductItem 

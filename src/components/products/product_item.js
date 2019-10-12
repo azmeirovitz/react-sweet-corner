@@ -2,10 +2,10 @@ import React from 'react';
 import Money from '../general/money';
 
 
-const ProductItem = (props) => {
-    
+const ProductItem = (props) => {    
 
-    console.log("ProductItem props: ", props);
+    //console.log("ProductItem props: ", props);
+    
     return (
         <div className= "grid product-item" onClick={props.goToDetails}>
             

@@ -15,17 +15,9 @@ componentDidMount () {
 
     const query = queryToObject(location.search);
 
-    console.log("Query Object: ", query);
-
-    
-
-    console.log("getGuestOrderDetails this.props: ", this.props)
-
     const orderId = this.props.match.params.order_id;
 
-    console.log("orderId from guest_order_details: ", orderId);
-
-    console.log("this.props.match.params.order_id from guest_order_details: ", this.props.match.params.order_id);
+    //console.log("this.props.match.params.order_id from guest_order_details: ", this.props.match.params.order_id);
 
     this.props.getGuestOrderDetails(orderId, query.email);
 
@@ -34,25 +26,19 @@ componentDidMount () {
 
 render () {
 
-    console.log ("Order Details::: ", this.props); 
+    //console.log ("Order Details::: ", this.props); 
 
     const cartItems = this.props.orders ? this.props.orders.items : [];
 
     let trial = this.props.orders && this.props.orders.createdAt;
 
-    console.log("Day and Time: ", 
-    trial);
-
     const objectTime = dateAndTime(trial);
-
-    console.log("Query Object: ", objectTime);
 
     var objectTime2 = objectTime && objectTime[1].split(":");
 
-    console.log("objectTime2:: ", objectTime2);
-
+    
     var hourNumber = parseInt(objectTime2 && objectTime2[0]);
-    console.log("hourNumber: ", hourNumber, objectTime2 && objectTime2[0]);
+    //console.log("hourNumber: ", hourNumber, objectTime2 && objectTime2[0]);
 
 
 
@@ -103,7 +89,7 @@ render () {
                     <tbody>
                     {cartItems.map(oneItem => {
                     return (
-                        <tr key={oneItem.product.productId}>
+                        <tr key={oneItem.product.id}>
                             <td className="td">
                              <img className="cupcakeImgCart" src={oneItem.product.thumbnail.url} />
                             </td>

@@ -16,7 +16,7 @@ componentDidMount () {
 
 render () {
 
-    console.log("Cart Items: ", this.props.cartItems);
+    //console.log("Cart Items: ", this.props.cartItems);
 
     const {cartItems} = this.props;
 

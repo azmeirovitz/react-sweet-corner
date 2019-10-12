@@ -13,8 +13,7 @@ export default (state = DEFAULT_STATE, action) => {
             return {...state, 
                 details: action.orders} 
         
-                //Not sure about action.email so OR orderDetails
-    
+                    
             break;
 
             default: 

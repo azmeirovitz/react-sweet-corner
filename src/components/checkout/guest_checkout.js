@@ -13,7 +13,7 @@ handleGuestCheckout = async (formValues) => {
     
     const orderInfo =  await this.props.createGuestOrder(formValues);
 
-    console.log("orderInfo: ", orderInfo); 
+    //console.log("orderInfo: ", orderInfo); 
 
     const redirectUrl = `/orders/guest/${orderInfo.orderId}?email=${orderInfo.email}`;
 
